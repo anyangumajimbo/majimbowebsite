@@ -35,7 +35,7 @@ nav a:hover {
 
 /* Main Container */
 .container {
-    margin-right: 500;
+    margin-right: 500px;
     max-width: 900px;
     margin: 20px auto;
     background: rgb(255, 255, 255);
@@ -88,10 +88,10 @@ footer {
     width: 200px; /* Set the width */
     float: left;
     margin-bottom: 100px;
-    margin right: 20px;
-    height: auto;  /*Maintain aspect ratio */
+    margin-right: 20px;
+    height:auto;  /*Maintain aspect ratio */
     border-radius: 100px; /* Optional: Adds rounded corners */
-    /*border: 2px solid #0056b3;  Optional: Adds a border */
-    /*display: block;  Ensures the image is centered */
+   border: 2px solid #0056b3;   /* Optional: Adds a border */
+    display: block;  /* Ensures the image is centered */
     margin: 10px auto; /* Centers the image horizontally and adds space */
 }
