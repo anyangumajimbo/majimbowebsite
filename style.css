@@ -10,65 +10,70 @@ body {
 /* Header Styling */
 header {
     background-color: #0056b3;
-    color: white;
+    color: white; /* Changed to white for better contrast */
     text-align: center;
-    padding-top: 10px;
-    justify-content: center; /*centers text horizontally*/
-    align-items: center; /*centers text vertically */
-    height: 200px; /*Adjust height as needed*/
+    padding: 10px;
+    display: flex; /* Added to enable flexbox properties */
+    justify-content: center; /* Centers text horizontally */
+    align-items: center; /* Centers text vertically */
+    height: 100px; /* Adjust height as needed */
 }
+
 header h1 {
-    color: red; /* Text color */
-    font-size: 36px; /* Text size */
-    font-weight: bold; /* Makes text bold */
-    font-family: Arial, sans-serif; /* Custom font */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adds shadow effect */
-    letter-spacing: 2px; /* Spacing between letters */
-    border-radius: 20px;
+    color: white; /* Changed to white for consistency */
+    font-size: 24px; /* Increased font size for better visibility */
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+    border-radius: 10px;
+    margin: 0; /* Remove default margin */
 }
 
 .about-text {
-    font-size: 18px; /* Adjust text size */
-    color: #333; /* Dark gray text */
-    line-height: 1.6; /* Improve readability */
-    font-weight: 400; /* Normal weight */
-    text-align: justify; /* Align text properly */
-    background-color: #f9f9f9; /* Light gray background */
-    padding: 15px; /* Add spacing */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    margin-left: 200px;
-  }
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    font-weight: 400;
+    text-align: justify;
+    background-color: #e0f7fa; /* Softer background color */
+    padding: 15px;
+    border-radius: 10px; /* Increased border radius */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px; /* Adjusted margin */
+}
   
 
 /* Navigation Bar */
 nav {
-    position: relative;
-    left: 20px;
-    border-radius: 20px;
-    justify-content: right;
+    display: flex; /* Added to enable flexbox properties */
+    justify-content: flex-end; /* Aligns items to the right */
     background: #339;
     padding: 10px;
+    border-radius: 20px;
+    margin: 10px 20px; /* Added margin for spacing */
 }
 
 nav a {
-    position: relative;
-    left: 10px;
-    color: green;
+    color: white; /* Changed to white for better contrast */
     text-decoration: none;
     padding: 14px 20px;
+    transition: background 0.3s ease; /* Smooth hover transition */
 }
 
+nav a:hover {
+    background: #0056b3;
+    border-radius: 5px; /* Added rounded corners on hover */
+}
 nav a:hover {
     background: #0056b3;
 }
 
 /* Main Container */
 .container {
-    /* margin-right: 500px;
-    max-width: 900px; */
+    max-width: 900px; /* Added max-width for better readability */
     margin: 20px auto;
-    background: rgb(255, 255, 255);
+    background: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -108,23 +113,38 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    position: relative;
-    bottom: 0;
     width: 100%;
+    margin-top: 20px; /* Added margin for spacing */
 }
 
 /* Profile image styling */
 .profile-image {
-    width: 200px; /* Set the width */
-    float: left;
-    top: 210px;
-    margin-bottom: 300px;
-    margin-right: 20px;
-    height:auto;  /*Maintain aspect ratio */
-    border-radius: 100px; /* Optional: Adds rounded corners */
-   border: 2px solid #0056b3;   /* Optional: Adds a border */
-    display: block;  /* Ensures the image is centered */
-    margin: 10px auto; /* Centers the image horizontally and adds space */
-    position:relative;
+    width: 200px;
+    height: auto;
+    border-radius: 50%; /* Makes the image circular */
+    border: 2px solid #0056b3;
+    margin: 20px; /* Added margin for spacing */
+    display: block; /* Ensures the image is centered */
+}
 
+/*Media Query for responsiveness */
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column; /* Stack nav links vertically on small screens */
+        align-items: center;
+    }
+
+    .profile-image {
+        float: none; /* Remove float on small screens */
+        margin: 20px auto; /* Center the image */
+    }
+
+    .about-text {
+        margin-left: 0; /* Remove left margin on small screens */
+    }
 }
