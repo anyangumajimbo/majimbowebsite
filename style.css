@@ -9,25 +9,46 @@ body {
 
 /* Header Styling */
 header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space out left and right sections */
     background-color: #0056b3;
-    color: white; /* Changed to white for better contrast */
-    text-align: center;
-    padding: 10px;
-    display: flex; /* Added to enable flexbox properties */
-    justify-content: center; /* Centers text horizontally */
-    align-items: center; /* Centers text vertically */
-    height: 100px; /* Adjust height as needed */
+    padding: 10px 20px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.profile-image {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin-right: 20px;
+    top: 40px;
 }
 
 header h1 {
-    color: white; /* Changed to white for consistency */
-    font-size: 24px; /* Increased font size for better visibility */
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    letter-spacing: 2px;
-    border-radius: 10px;
-    margin: 0; /* Remove default margin */
+    color: white;
+    font-size: 24px;
+}
+
+.header-right {
+    display: flex;
+    gap: 15px; /* Space between icons */
+}
+
+.header-right a {
+    color: white; /* Icon color */
+    font-size: 24px; /* Icon size */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.header-right a:hover {
+    color: purple; /* Change icon color on hover */
 }
 
 .about-text {
@@ -47,7 +68,8 @@ header h1 {
 /* Navigation Bar */
 nav {
     display: flex; /* Added to enable flexbox properties */
-    justify-content: flex-end; /* Aligns items to the right */
+    justify-content: center; /* Aligns items to the right */
+    align-items: center; /* Ensures items are aligned on a straight line */
     background: #339;
     padding: 10px;
     border-radius: 20px;
@@ -55,10 +77,12 @@ nav {
 }
 
 nav a {
+    float: left;
     color: white; /* Changed to white for better contrast */
     text-decoration: none;
     padding: 14px 20px;
     transition: background 0.3s ease; /* Smooth hover transition */
+    
 }
 
 nav a:hover {
@@ -71,7 +95,7 @@ nav a:hover {
 
 /* Main Container */
 .container {
-    max-width: 900px; /* Added max-width for better readability */
+   /* max-width: 1800x;  Added max-width for better readability */
     margin: 20px auto;
     background: white;
     padding: 20px;
@@ -117,15 +141,6 @@ footer {
     margin-top: 20px; /* Added margin for spacing */
 }
 
-/* Profile image styling */
-.profile-image {
-    width: 200px;
-    height: auto;
-    border-radius: 50%; /* Makes the image circular */
-    border: 2px solid #0056b3;
-    margin: 20px; /* Added margin for spacing */
-    display: block; /* Ensures the image is centered */
-}
 
 /*Media Query for responsiveness */
 @media (max-width: 768px) {
