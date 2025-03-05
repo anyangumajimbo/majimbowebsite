@@ -66,36 +66,71 @@ header h1 {
   
 
 /* Navigation Bar */
+/* Navigation Bar */
 nav {
-    display: flex; /* Added to enable flexbox properties */
-    justify-content: center; /* Aligns items to the right */
-    align-items: center; /* Ensures items are aligned on a straight line */
-    background: #339;
-    padding: 10px;
-    border-radius: 20px;
-    margin: 10px 20px; /* Added margin for spacing */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
 }
 
-nav a {
-    float: left;
-    color: white; /* Changed to white for better contrast */
+/* Hamburger Icon */
+.hamburger {
+    display: none; /* Hide by default on larger screens */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+.nav-links a {
+    color: white;
     text-decoration: none;
-    padding: 14px 20px;
-    transition: background 0.3s ease; /* Smooth hover transition */
-    
+    font-size: 18px;
+    transition: color 0.3s ease;
 }
 
-nav a:hover {
-    background: #0056b3;
-    border-radius: 5px; /* Added rounded corners on hover */
-}
-nav a:hover {
-    background: #0056b3;
+.nav-links a:hover {
+    color: #ffcc00; /* Change color on hover */
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Show hamburger icon on smaller screens */
+    }
+
+    .nav-links {
+        display: none; /* Hide links by default on smaller screens */
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        right: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-links.active {
+        display: flex; /* Show links when menu is active */
+    }
+}
 /* Main Container */
 .container {
-   /* max-width: 1800x;  Added max-width for better readability */
+    max-width: 1800x; /* Added max-width for better readability */
     margin: 20px auto;
     background: white;
     padding: 20px;
